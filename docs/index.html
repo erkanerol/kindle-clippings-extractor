@@ -21,12 +21,16 @@
   </div>
   <div id="main">
       <div id="col">
-        <textarea id="left-panel" class="full-text-area" placeholder="Copy MyClippings.txt here"></textarea>
+        <button class="btn btn-info" disabled="true">Copy My Clippings.txt here
+        </button>
+        <textarea id="left-panel" class="full-text-area"></textarea>
       </div>
       <div id="col">
+        <button class="btn btn-info" onclick="downloadMyClippings()">Download My Clippings.txt</button>
         <textarea id="center-panel" class="full-text-area"></textarea>
       </div>
       <div id="col">
+        <button class="btn btn-info" onclick="downloadBookClippings()">Download Book Clippings.txt</button>
         <textarea id="right-panel" class="full-text-area"></textarea>
       </div>
   </div>

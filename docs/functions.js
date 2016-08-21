@@ -55,3 +55,22 @@ function getCenterPanel(){
 function getBookName(){
   return document.getElementById("book-name");
 };
+
+function downloadMyClippings(){
+  var centerPanel = getCenterPanel();
+  download(centerPanel.value,"My Clippings.txt","txt");
+};
+
+function downloadBookClippings(){
+  var rightPanel = getRightPanel();
+  var bookName = getBookName().value;
+  download(rightPanel.value,bookName+".txt","txt");
+};
+
+function download(text, name, type) {
+    var a = document.createElement("a");
+    var file = new Blob([text], {type: type});
+    a.href = URL.createObjectURL(file);
+    a.download = name;
+    a.click();
+}
